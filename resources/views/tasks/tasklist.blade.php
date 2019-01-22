@@ -22,6 +22,8 @@
 
     <link rel='shortcut icon' type='image/x-icon' href='../assets/images/weego1.png' />
 
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 	<title>To Do List</title>
 </head>
@@ -36,7 +38,7 @@
 				<div class="form-group" style="background-color: #7e5dc6; color:white; border-radius: 5%; border: 5px solid #2d1660">
 					<label for="newtask" style="width:30%; margin-left: 4%;">New Task:</label>
 					<input type="text" name="newtask" id="newtask" class="form-control" style="width:94%; margin-left:3%; margin-bottom: 2%;">
-					<button type="submit" class="btn" style="width: 50%; margin-left:25%; margin-bottom:2%; background-color: #0563c7; border: 3px solid #0e354e; border-radius: 40%;"><i class="fa fa-btn fa-plus"></i>Add Task</button>
+					<button type="submit" class="btn" style="width: 50%; margin-left:25%; margin-bottom:2%; background-color: #41b1fb; border: 3px solid #0e354e; border-radius: 40%;"><i class="fa fa-btn fa-plus"></i>Add Task</button>
 				</div>
 			</form>
 				@if(Session::has("success_message"))
@@ -52,7 +54,7 @@
 				</thead>
 				<tbody>
 					@foreach($tasks as $task)
-						<tr>
+						<tr style="font-family: 'Baloo Thambi', cursive;">
 							<td>{{ $task->name }}</td>	
 							<td>{{ $task->created_at->diffForHumans() }} </td>
 							<td><button type="button" class= "btn btn-danger" data-toggle="modal" onclick="openDeleteModal({{ $task->id }}, '{{ $task->name }}')">Delete</button>

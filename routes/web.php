@@ -24,3 +24,6 @@ Route::post('/newtask', "TaskController@addTasks");
 Route::patch("/task/{id}", "TaskController@editTasks");
 
 Route::delete("/task/{id}", "TaskController@deleteTasks");
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
